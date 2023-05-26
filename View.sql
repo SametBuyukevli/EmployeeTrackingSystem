@@ -7,9 +7,6 @@ AS
         JOIN Role AS r ON e.RoleID = r.RoleID
         JOIN EmpEmail AS ee ON e.TCKN = ee.TCKN;
 
--- SELECT *
--- FROM EmpInfo
-
 --employees entry and exit information
 CREATE VIEW EmpTimeLog
 AS
@@ -17,9 +14,7 @@ AS
     FROM Employee AS e, TimeLog AS t
     WHERE e.TCKN = t.TCKN
 
--- SELECT *
--- FROM EmpTimeLog
-
+--Employee Service
 CREATE VIEW EmpService
 AS
     SELECT e.TCKN, CONCAT(FirstName,' ',Minit,' ',LastName) AS Name, NumberPlate, DriverName
