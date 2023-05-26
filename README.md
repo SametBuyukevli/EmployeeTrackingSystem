@@ -1,35 +1,35 @@
 # Employee Tracking System
 
-Employee Tracking System, bir şirketin çalışanlarının, departmanlarının, hizmetlerinin ve izinlerinin takibini yapmak için kullanılan bir veritabanı projesidir.
+Employee Tracking System is a database project used to track employees, departments, services, and permissions within a company.
 
-## Kurulum
+## Installation
 
-1. Projenin tamamını bilgisayarınıza indirin veya klonlayın.
-2. Veritabanını oluşturmak için `Employee_Tracking_System.sql` dosyasını MSSQL veritabanı yönetim aracınızda çalıştırın.
-3. Proje klasöründe, gerekli SQL kodlarına `Trigger.sql` ve `View.sql` dosyalarında ulaşabilirsiniz. Bu kodları kullanarak tetikleyicileri ve görünümleri ekleyebilirsiniz.
+1. Download or clone the entire project to your computer.
+2. Run the `Employee_Tracking_System.sql` file in your MSSQL database management tool to create the database.
+3. In the project folder, you can find the necessary SQL codes in the `Trigger.sql` and `View.sql` files. Use these codes to add triggers and views.
 
-## Kullanım
+## Usage
 
-Proje, çalışanlar, departmanlar, hizmetler, izinler ve diğer ilgili verilerin takibi için bir veritabanı sunmaktadır. Aşağıda bazı temel kullanım örnekleri bulunmaktadır:
+The project provides a database for tracking employees, departments, services, permissions, and other related data. Here are some basic usage examples:
 
-- **EmpInfo** görünümü, çalışanların isimleri, telefon numaraları, e-posta adresleri, departmanları, rolleri ve maaşları gibi bilgileri listeler.
-- **EmpTimeLog** görünümü, çalışanların giriş ve çıkış saatlerini gösterir.
-- **EmpService** görünümü, çalışanların hizmet bilgilerini, plaka numaralarını ve sürücü isimlerini gösterir.
-- **LeaveDaysEmployee** görünümü, çalışanların her ay aldığı izin günlerini gösterir.
+- The `EmpInfo` view lists information about employees such as their names, phone numbers, email addresses, departments, roles, and salaries.
+- The `EmpTimeLog` view shows the entry and exit times of employees.
+- The `EmpService` view displays information about services, including the plate numbers and driver names associated with employees.
+- The `LeaveDaysEmployee` view presents the number of leave days taken by employees each month.
 
-Detaylı kullanım talimatları için, proje içerisindeki diğer kod dosyalarına ve belgelendirmelere bakabilirsiniz.
+## Triggers
 
-## Tetikleyiciler
+The project includes the following triggers:
 
-Projede yer alan bazı tetikleyiciler de bulunmaktadır:
+- `tg_CheckSeats`: Checks the number of empty seats in the service when a new employee is added. If there are no empty seats, it raises an error message.
+- `tg_PermissionInsert`: Checks the current permission count of an employee when a new permission is added. If the permission count is not appropriate, it raises an error message.
 
-- **tg_CheckSeats**: Yeni bir çalışan eklendiğinde, hizmetteki boş koltuk sayısını kontrol eder ve eğer boş koltuk yoksa hata mesajı döndürür.
-- **tg_PermissionInsert**: İzin eklendiğinde, çalışanın mevcut izin sayısını kontrol eder ve izin sayısı uygun değilse hata mesajı döndürür.
+For detailed usage instructions, refer to the other code files and documentation within the project.
 
-Detaylı kullanım talimatları için ilgili kod dosyalarını ve belgelendirmeleri inceleyebilirsiniz.
 
-## İletişim
 
-Proje ile ilgili sorularınız veya geri bildirimleriniz için lütfen [sametertugrulbuyukevli@gmail.com] adresine e-posta gönderin.
+## Contact
 
-Bu README dosyası, Employee Tracking System projesinin kullanımı ve katkıda bulunma süreci hakkında temel bilgileri içermektedir. Detaylı bilgiler için ilgili kod dosyalarını ve belgelendirmeleri inceleyebilirsiniz. Projeyle ilgili herhangi bir sorunuz veya destek talebiniz varsa, iletişim bilgilerini kullanarak bize ulaşabilirsiniz.
+For any questions or feedback related to the project, please email [sametertugrulbuyukevli@gmail.com]
+
+This README file provides basic information on the usage and contribution process of the Employee Tracking System project. For detailed information, refer to the relevant code files and documentation. If you have any questions or need support regarding the project, feel free to contact us using the provided contact information.
