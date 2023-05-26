@@ -12,7 +12,7 @@ BEGIN
     SELECT @Seats =s.NumberOfSeats
     FROM Service AS s
     WHERE s.RouteID = @insertedRouteID
-    --We looked at how many people with the same route id in the employee table
+    --We looked at how many people with the same route id in the employee table.
     DECLARE @NumberofEmp INT
     SELECT @NumberofEmp = COUNT(*)
     FROM Employee AS e
