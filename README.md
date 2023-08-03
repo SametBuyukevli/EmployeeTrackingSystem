@@ -1,4 +1,5 @@
 # Employee Tracking System
+![Mantıksal Tasarım](https://user-images.githubusercontent.com/80046570/258198667-9867bcff-3f9a-4c73-b1db-c23a5db01ead.jpg)
 
 Employee Tracking System is a database project used to track employees, departments, services, and permissions within a company.
 
